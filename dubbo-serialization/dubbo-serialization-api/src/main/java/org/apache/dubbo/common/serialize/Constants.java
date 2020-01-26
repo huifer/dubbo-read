@@ -17,6 +17,9 @@
 
 package org.apache.dubbo.common.serialize;
 
+/**
+ * 常量
+ */
 public interface Constants {
     byte HESSIAN2_SERIALIZATION_ID = 2;
     byte JAVA_SERIALIZATION_ID = 3;

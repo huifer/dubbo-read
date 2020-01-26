@@ -93,14 +93,21 @@ public class FastJsonObjectOutput implements ObjectOutput {
         writer.println(new String(b, off, len));
     }
 
+    /**
+     * 重写写出方法
+     * @param obj object.
+     * @throws IOException
+     */
     @Override
     public void writeObject(Object obj) throws IOException {
         SerializeWriter out = new SerializeWriter();
+        // fastJson 序列化
         JSONSerializer serializer = new JSONSerializer(out);
         serializer.config(SerializerFeature.WriteEnumUsingToString, true);
         serializer.write(obj);
         out.writeTo(writer);
         out.close(); // for reuse SerializeWriter buf
+        // 写出数据
         writer.println();
         writer.flush();
     }

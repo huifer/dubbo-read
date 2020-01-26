@@ -20,6 +20,9 @@ import java.io.IOException;
 
 /**
  * Basic data type input interface.
+ *
+ *
+ * 读取类型
  */
 public interface DataInput {
 
