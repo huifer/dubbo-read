@@ -1,6 +1,8 @@
 # Dubbo 序列化 
 - Author: [HuiFer](https://github.com/huifer)
 - 源码阅读仓库: [huifer-dubbo](https://github.com/huifer/dubbo-read)
+
+
 - dubbo 的序列化工程位于[dubbo-serialization](../../dubbo-serialization)
 - 查看 pom 文件
 ```xml
