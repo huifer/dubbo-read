@@ -149,7 +149,8 @@
         <module>dubbo-configcenter</module>
         <module>dubbo-dependencies</module>
         <module>dubbo-metadata</module>
-    </modules>
+		<module>huifer-source-code</module>
+	</modules>
 
     <dependencyManagement>
         <dependencies>
