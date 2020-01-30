@@ -201,6 +201,7 @@ public class RegistryProtocol implements Protocol {
         final ExporterChangeableWrapper<T> exporter = doLocalExport(originInvoker, providerUrl);
 
         // url to registry
+        // 获取注册
         final Registry registry = getRegistry(originInvoker);
         final URL registeredProviderUrl = getUrlToRegistry(providerUrl, registryUrl);
         // decide if we need to delay publish
@@ -290,7 +291,8 @@ public class RegistryProtocol implements Protocol {
     /**
      * Get an instance of registry based on the address of invoker
      *
-     * @param originInvoker
+     * 根据 invoker的地址获取注册实例
+     * @param originInvoker 
      * @return
      */
     protected Registry getRegistry(final Invoker<?> originInvoker) {

@@ -68,6 +68,11 @@ public abstract class AbstractZookeeperClient<TargetDataListener, TargetChildLis
     }
 
 
+    /**
+     * zookeeper 注册节点
+     * @param path
+     * @param ephemeral
+     */
     @Override
     public void create(String path, boolean ephemeral) {
         if (!ephemeral) {

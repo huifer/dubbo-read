@@ -83,6 +83,11 @@ public class ZookeeperServiceDiscovery implements ServiceDiscovery, EventListene
         serviceDiscovery.close();
     }
 
+    /**
+     * 注冊
+     * @param serviceInstance an instance of {@link ServiceInstance} to be registered
+     * @throws RuntimeException
+     */
     public void register(ServiceInstance serviceInstance) throws RuntimeException {
         doInServiceRegistry(serviceDiscovery -> {
             serviceDiscovery.registerService(build(serviceInstance));

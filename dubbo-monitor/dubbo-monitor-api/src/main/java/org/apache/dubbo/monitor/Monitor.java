@@ -21,6 +21,7 @@ import org.apache.dubbo.common.Node;
 /**
  * Monitor. (SPI, Prototype, ThreadSafe)
  *
+ * 监控中心配置
  * @see org.apache.dubbo.monitor.MonitorFactory#getMonitor(org.apache.dubbo.common.URL)
  */
 public interface Monitor extends Node, MonitorService {

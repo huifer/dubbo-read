@@ -39,6 +39,8 @@ import static org.apache.dubbo.common.constants.CommonConstants.DEFAULT_PROTOCOL
 
 /**
  * DubboMonitor
+ *
+ * dubbo 监控中心配置
  */
 public class DubboMonitor implements Monitor {
 
