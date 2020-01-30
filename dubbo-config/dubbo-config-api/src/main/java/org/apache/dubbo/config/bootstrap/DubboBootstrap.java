@@ -503,6 +503,7 @@ public class DubboBootstrap extends GenericEventListener {
 
         ApplicationModel.initFrameworkExts();
 
+        // 配置中心启动
         startConfigCenter();
 
         useRegistryAsConfigCenterIfNecessary();
@@ -695,9 +696,11 @@ public class DubboBootstrap extends GenericEventListener {
 
     /**
      * Start the bootstrap
+     * 启动方法
      */
     public DubboBootstrap start() {
         if (started.compareAndSet(false, true)) {
+            // 初始化
             initialize();
             if (logger.isInfoEnabled()) {
                 logger.info(NAME + " is starting...");

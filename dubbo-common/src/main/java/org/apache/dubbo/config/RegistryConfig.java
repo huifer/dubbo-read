@@ -183,6 +183,10 @@ public class RegistryConfig extends AbstractConfig {
     public RegistryConfig() {
     }
 
+    /**
+     *
+     * @param address 注册中心地址
+     */
     public RegistryConfig(String address) {
         setAddress(address);
     }

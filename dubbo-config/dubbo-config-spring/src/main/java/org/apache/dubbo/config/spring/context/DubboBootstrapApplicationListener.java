@@ -39,6 +39,10 @@ public class DubboBootstrapApplicationListener extends OneTimeExecutionApplicati
         this.dubboBootstrap = DubboBootstrap.getInstance();
     }
 
+    /**
+     * spring 事件后处理方法
+     * @param event {@link ApplicationContextEvent}
+     */
     @Override
     public void onApplicationContextEvent(ApplicationContextEvent event) {
         if (event instanceof ContextRefreshedEvent) {

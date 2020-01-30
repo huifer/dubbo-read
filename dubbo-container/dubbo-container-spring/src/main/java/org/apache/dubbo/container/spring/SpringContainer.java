@@ -40,12 +40,16 @@ public class SpringContainer implements Container {
         return context;
     }
 
+    /**
+     * 非web项目的启动方法
+     */
     @Override
     public void start() {
         String configPath = ConfigUtils.getProperty(SPRING_CONFIG);
         if (StringUtils.isEmpty(configPath)) {
             configPath = DEFAULT_SPRING_CONFIG;
         }
+        // 走spring的初始化方法
         context = new ClassPathXmlApplicationContext(configPath.split("[,\\s]+"), false);
         context.refresh();
         context.start();

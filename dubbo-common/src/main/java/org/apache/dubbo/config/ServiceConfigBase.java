@@ -308,6 +308,10 @@ public abstract class ServiceConfigBase<T> extends AbstractServiceConfig {
         return interfaceName;
     }
 
+    /**
+     * 设置 接口类
+     * @param interfaceClass 接口类
+     */
     public void setInterface(Class<?> interfaceClass) {
         if (interfaceClass != null && !interfaceClass.isInterface()) {
             throw new IllegalStateException("The interface class " + interfaceClass + " is not a interface!");
@@ -327,6 +331,10 @@ public abstract class ServiceConfigBase<T> extends AbstractServiceConfig {
         return ref;
     }
 
+    /**
+     * 设置对应的远程方法或者远程类
+     * @param ref
+     */
     public void setRef(T ref) {
         this.ref = ref;
     }
